@@ -13,9 +13,16 @@ body {
 
 .grid-item {
     background-color: white;
+    text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 10px grey;
     -moz-box-shadow: 0 0 10px grey;
     -webkit-box-shadow: 0 0 10px grey;
     -o-box-shadow: 0 0 10px grey;
+}
+
+img {
+    height: 150x;
+    width: 150px;
+    border-radius: 50%;
 }
