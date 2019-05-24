@@ -1,0 +1,21 @@
+body {
+    background-color: #F0F4F7;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 400px;
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.grid-item {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+    -moz-box-shadow: 0 0 10px grey;
+    -webkit-box-shadow: 0 0 10px grey;
+    -o-box-shadow: 0 0 10px grey;
+}
