@@ -2,13 +2,20 @@ body {
     background-color: #F0F4F7;
 }
 
+audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
 .grid-container {
     display: grid;
     justify-content: center;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 400px;
     grid-gap: 30px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .grid-item {
