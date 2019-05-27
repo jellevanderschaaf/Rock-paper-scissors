@@ -1,5 +1,16 @@
+@font-face {
+    font-family: "CrushYourEnemies_REGULAR";
+    src: url("CrushYourEnemies_REGULAR.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CrushYourEnemies_BOLD";
+    src: url("CrushYourEnemies_BOLD.ttf") format("truetype");
+}
+
 body {
     background-color: #F0F4F7;
+    font-family: "CrushYourEnemies_REGULAR";
 }
 
 audio {
@@ -11,7 +22,15 @@ audio {
 
 h2 {
     text-align: center;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
     margin: 0px;
 }
 
