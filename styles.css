@@ -9,6 +9,17 @@ audio {
     margin-top: 50px;
 }
 
+h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#myCarousel {
+    width: 300px;
+    margin: auto;
+    border-radius: 5px;
+}
+
 .grid-container {
     display: grid;
     justify-content: center;
