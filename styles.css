@@ -14,11 +14,16 @@ h2 {
     padding-bottom: 20px;
 }
 
-#myCarousel {
-    width: 300px;
-    margin: auto;
-    border-radius: 5px;
+.character-grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px;
+    grid-gap: 30px;
+    margin-top: 50px;
 }
+
+.character-grid-item {}
 
 .grid-container {
     display: grid;
@@ -27,6 +32,7 @@ h2 {
     grid-template-rows: 400px;
     grid-gap: 30px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .grid-item {
@@ -37,6 +43,12 @@ h2 {
     -moz-box-shadow: 0 0 10px grey;
     -webkit-box-shadow: 0 0 10px grey;
     -o-box-shadow: 0 0 10px grey;
+}
+
+.character-img {
+    height: 100x;
+    width: 100px;
+    border-radius: 50%;
 }
 
 img {
