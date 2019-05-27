@@ -17,7 +17,7 @@ h2 {
 .character-grid-container {
     display: grid;
     justify-content: center;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 100px;
     grid-gap: 30px;
     margin-top: 50px;
