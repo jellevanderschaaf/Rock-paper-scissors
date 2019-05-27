@@ -80,17 +80,19 @@ img {
     height: 150x;
     width: 150px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .fight {
     padding-bottom: 13px;
 }
 
-.far {
-    width: 30px;
-    height: 30px;
+.handIcons {
+    font-size: 30px;
+    padding: 0px 7px 0px 7px;
 }
 
 .fa-circle {
     color: rgb(83, 83, 83);
+    margin-bottom: 40px;
 }
