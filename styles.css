@@ -12,6 +12,7 @@ audio {
 h2 {
     text-align: center;
     padding-bottom: 20px;
+    margin: 0px;
 }
 
 .character-grid-container {
@@ -20,7 +21,7 @@ h2 {
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 100px;
     grid-gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .character-grid-item {}
@@ -49,6 +50,11 @@ h2 {
     height: 100x;
     width: 100px;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.character-img:hover {
+    border: 3px solid rgb(121, 206, 3);
 }
 
 img {
