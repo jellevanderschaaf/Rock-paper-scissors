@@ -96,3 +96,8 @@ img {
     color: rgb(83, 83, 83);
     margin-bottom: 40px;
 }
+
+.left {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
