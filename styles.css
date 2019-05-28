@@ -30,7 +30,7 @@ h2 {
 h3 {
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     margin: 0px;
 }
 
@@ -42,8 +42,6 @@ h3 {
     grid-gap: 30px;
     margin-top: 30px;
 }
-
-.character-grid-item {}
 
 .grid-container {
     display: grid;
