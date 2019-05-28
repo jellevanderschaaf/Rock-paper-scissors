@@ -1,6 +1,8 @@
 // Global variables
 
 var playerCharacter;
+var playerCharacterName;
+
 
 var characterConan = "Conan";
 var characterThulsaDoom = "Thulsa Doom";
@@ -30,9 +32,14 @@ function chooseCharacter(id) {
         document.getElementById('Thulsa').style.border = "";
         document.getElementById('Zula').style.border = "";
     }
+
+    if (playerCharacter == "Thulsa") {
+        playerCharacterName = "Thulsa Doom"
+    } else playerCharacterName = playerCharacter;
+
 };
 
 function enterTheArena() {
-    document.getElementById('characterName').innerHTML = playerCharacter;
+    document.getElementById('characterName').innerHTML = playerCharacterName;
     document.getElementById('characterImage').src = playerCharacter + '.jpg';
 }
