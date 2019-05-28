@@ -40,7 +40,7 @@ h3 {
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 100px;
     grid-gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .grid-container {
@@ -71,7 +71,7 @@ h3 {
 }
 
 .character-img:hover {
-    border: 3px solid rgb(121, 206, 3);
+    border: 3px solid #00C851;
 }
 
 img {
