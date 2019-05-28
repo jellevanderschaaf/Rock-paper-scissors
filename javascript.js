@@ -30,5 +30,9 @@ function chooseCharacter(id) {
         document.getElementById('Thulsa').style.border = "";
         document.getElementById('Zula').style.border = "";
     }
-
 };
+
+function enterTheArena() {
+    document.getElementById('characterName').innerHTML = playerCharacter;
+    document.getElementById('characterImage').src = playerCharacter + '.jpg';
+}
