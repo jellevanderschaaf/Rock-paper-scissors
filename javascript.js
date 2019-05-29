@@ -37,13 +37,14 @@ function chooseCharacter(id) {
         playerCharacterName = "Thulsa Doom"
     } else playerCharacterName = playerCharacter;
 
-
-
 };
 
 function enterTheArena() {
-    document.getElementById('characterName').innerHTML = playerCharacterName;
-    document.getElementById('characterImage').src = playerCharacter + '.jpg';
-    document.getElementById("item" + playerCharacter).outerHTML = "";
-    document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
+
+    if (playerCharacter) {
+        document.getElementById('characterName').innerHTML = playerCharacterName;
+        document.getElementById('characterImage').src = playerCharacter + '.jpg';
+        document.getElementById("item" + playerCharacter).outerHTML = "";
+        document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
+    }
 }
