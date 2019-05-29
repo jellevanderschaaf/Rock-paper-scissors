@@ -64,14 +64,14 @@ function enterTheArena() {
     setTimeout(toggle, 5000);
     setTimeout(computerChooses4, 6000);
     setTimeout(toggle, 6500);
-    setTimeout(computerChoosesFinal, 7000);
-    setTimeout(toggleFinalChoiceOff, 7100);
-    setTimeout(toggleFinalChoiceOn, 7200);
-    setTimeout(toggleFinalChoiceOff, 7300);
-    setTimeout(toggleFinalChoiceOn, 7400);
-    setTimeout(toggleFinalChoiceOff, 7500);
-    setTimeout(toggleFinalChoiceOn, 7600);
-    setTimeout(computerEntersArena, 8000);
+    setTimeout(computerChoosesFinal, 7500);
+    setTimeout(toggleFinalChoiceOff, 7600);
+    setTimeout(toggleFinalChoiceOn, 7700);
+    setTimeout(toggleFinalChoiceOff, 7800);
+    setTimeout(toggleFinalChoiceOn, 7900);
+    setTimeout(toggleFinalChoiceOff, 8000);
+    setTimeout(toggleFinalChoiceOn, 8100);
+    setTimeout(computerEntersArena, 8500);
 
 }
 
@@ -128,4 +128,21 @@ function computerEntersArena() {
     document.getElementById("item" + finalChoice).outerHTML = "";
     document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px');
     document.getElementById("buttonFight").disabled = false;
+}
+
+// global variables
+
+var playerScore;
+var computerScore;
+var playerHand;
+var ComputerHand;
+
+
+// gameplay functions
+
+function startGame() {
+
+    document.getElementById('theArena').innerHTML = "";
+    document.getElementById("buttonFight").outerHTML = "";
+
 }
