@@ -144,6 +144,16 @@ function startGame() {
 
     document.getElementById('theArena').innerHTML = "";
     document.getElementById("buttonFight").outerHTML = "";
+    setTimeout(resolveFight, 5000);
+
+}
+
+function setPlayerHand(id) {
+    playerHand = id;
+}
+
+
+function resolveFight() {
 
     if (playerHand == 'rock' && computerHand == 'rock') {
         document.getElementById('theArena').innerHTML = "Draw!";
@@ -175,4 +185,7 @@ function startGame() {
         document.getElementById('theArena').innerHTML = "Draw";
     }
 
+    if (playerHand == false) {
+        document.getElementById('theArena').innerHTML = "Computer wins this round!";
+    }
 }
