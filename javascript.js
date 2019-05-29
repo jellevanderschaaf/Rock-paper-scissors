@@ -47,5 +47,34 @@ function enterTheArena() {
         document.getElementById("item" + playerCharacter).outerHTML = "";
         document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
         document.getElementById("buttonArena").disabled = true;
+
     }
+
+    setTimeout(computerChooses1, 1500);
+    setTimeout(computerChooses2, 3000);
+    setTimeout(computerChooses3, 4500);
+    setTimeout(computerChooses4, 6000);
+    setTimeout(computerChooses2, 7500);
+    setTimeout(computerChooses3, 9000);
+    setTimeout(computerChooses4, 10500);
+    setTimeout(computerChooses2, 12000);
+    setTimeout(computerChooses3, 13500);
+    setTimeout(computerChooses4, 15000);
+
+}
+
+function computerChooses1() {
+    document.getElementById('infoText').innerHTML = "Computer chooses";
+}
+
+function computerChooses2() {
+    document.getElementById('infoText').innerHTML = "Computer chooses ."
+}
+
+function computerChooses3() {
+    document.getElementById('infoText').innerHTML = "Computer chooses . ."
+}
+
+function computerChooses4() {
+    document.getElementById('infoText').innerHTML = "Computer chooses . . ."
 }
