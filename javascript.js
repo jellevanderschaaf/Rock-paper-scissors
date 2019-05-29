@@ -4,6 +4,7 @@ var playerCharacter;
 var playerCharacterName;
 var characterArray = [];
 var randomChar;
+var finalChoice;
 
 // functions character selection
 
@@ -78,6 +79,13 @@ function enterTheArena() {
     setTimeout(toggle, 17000);
     setTimeout(computerChooses4, 18000);
     setTimeout(toggle, 18500);
+    setTimeout(computerChoosesFinal, 20000);
+    setTimeout(toggleFinalChoiceOff, 20100);
+    setTimeout(toggleFinalChoiceOn, 20200);
+    setTimeout(toggleFinalChoiceOff, 20300);
+    setTimeout(toggleFinalChoiceOn, 20400);
+    setTimeout(toggleFinalChoiceOff, 20500);
+    setTimeout(toggleFinalChoiceOn, 20600);
 
 }
 
@@ -107,4 +115,18 @@ function computerChooses4() {
 
 function toggle() {
     document.getElementById(randomChar).style.border = "";
+}
+
+function computerChoosesFinal() {
+    finalChoice = characterArray[Math.floor(Math.random() * characterArray.length)];
+    document.getElementById('infoText').innerHTML = "Computer picks " + finalChoice + "!"
+    document.getElementById(finalChoice).style.border = "thick solid #00C851";
+}
+
+function toggleFinalChoiceOff() {
+    document.getElementById(finalChoice).style.border = "";
+}
+
+function toggleFinalChoiceOn() {
+    document.getElementById(finalChoice).style.border = "thick solid #00C851";
 }
