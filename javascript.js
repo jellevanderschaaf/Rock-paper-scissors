@@ -46,5 +46,6 @@ function enterTheArena() {
         document.getElementById('characterImage').src = playerCharacter + '.jpg';
         document.getElementById("item" + playerCharacter).outerHTML = "";
         document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
+        document.getElementById("buttonArena").disabled = true;
     }
 }
