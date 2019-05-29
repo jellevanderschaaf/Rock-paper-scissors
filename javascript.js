@@ -15,6 +15,10 @@ function chooseCharacter(id) {
     document.getElementById(id).style.border = "thick solid #00C851";
     playerCharacter = id;
 
+    if (playerCharacter) {
+        document.getElementById("buttonArena").disabled = false;
+    }
+
     if (id == 'Conan') {
         document.getElementById('Thulsa').style.border = "";
         document.getElementById('Zula').style.border = "";
@@ -54,12 +58,14 @@ function enterTheArena() {
     setTimeout(computerChooses2, 3000);
     setTimeout(computerChooses3, 4500);
     setTimeout(computerChooses4, 6000);
-    setTimeout(computerChooses2, 7500);
-    setTimeout(computerChooses3, 9000);
-    setTimeout(computerChooses4, 10500);
-    setTimeout(computerChooses2, 12000);
-    setTimeout(computerChooses3, 13500);
-    setTimeout(computerChooses4, 15000);
+    setTimeout(computerChooses1, 7500);
+    setTimeout(computerChooses2, 9000);
+    setTimeout(computerChooses3, 10500);
+    setTimeout(computerChooses4, 12000);
+    setTimeout(computerChooses1, 13500);
+    setTimeout(computerChooses2, 15000);
+    setTimeout(computerChooses3, 16500);
+    setTimeout(computerChooses4, 18000);
 
 }
 
