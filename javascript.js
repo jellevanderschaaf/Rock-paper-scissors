@@ -64,22 +64,14 @@ function enterTheArena() {
     setTimeout(toggle, 5000);
     setTimeout(computerChooses4, 6000);
     setTimeout(toggle, 6500);
-    setTimeout(computerChooses1, 7500);
-    setTimeout(toggle, 8000);
-    setTimeout(computerChooses2, 9000);
-    setTimeout(toggle, 9500);
-    setTimeout(computerChooses3, 10500);
-    setTimeout(toggle, 11000);
-    setTimeout(computerChooses4, 12000);
-    setTimeout(toggle, 12500);
-    setTimeout(computerChoosesFinal, 13000);
-    setTimeout(toggleFinalChoiceOff, 13100);
-    setTimeout(toggleFinalChoiceOn, 13200);
-    setTimeout(toggleFinalChoiceOff, 13300);
-    setTimeout(toggleFinalChoiceOn, 13400);
-    setTimeout(toggleFinalChoiceOff, 13500);
-    setTimeout(toggleFinalChoiceOn, 13600);
-    setTimeout(computerEntersArena, 14000);
+    setTimeout(computerChoosesFinal, 7000);
+    setTimeout(toggleFinalChoiceOff, 7100);
+    setTimeout(toggleFinalChoiceOn, 7200);
+    setTimeout(toggleFinalChoiceOff, 7300);
+    setTimeout(toggleFinalChoiceOn, 7400);
+    setTimeout(toggleFinalChoiceOff, 7500);
+    setTimeout(toggleFinalChoiceOn, 7600);
+    setTimeout(computerEntersArena, 8000);
 
 }
 
@@ -131,9 +123,9 @@ function computerEntersArena() {
         computerCharacterName = "Thulsa Doom"
     } else computerCharacterName = finalChoice;
 
-
     document.getElementById('computerCharacterName').innerHTML = computerCharacterName;
     document.getElementById('computerCharacterImage').src = finalChoice + '.jpg';
     document.getElementById("item" + finalChoice).outerHTML = "";
     document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px');
+    document.getElementById("buttonFight").disabled = false;
 }
