@@ -5,6 +5,7 @@ var playerCharacterName;
 var characterArray = [];
 var randomChar;
 var finalChoice;
+var computerCharacterName;
 
 // functions character selection
 
@@ -125,7 +126,13 @@ function toggleFinalChoiceOn() {
 }
 
 function computerEntersArena() {
-    document.getElementById('computerCharacterName').innerHTML = finalChoice;
+
+    if (finalChoice == "Thulsa") {
+        computerCharacterName = "Thulsa Doom"
+    } else computerCharacterName = finalChoice;
+
+
+    document.getElementById('computerCharacterName').innerHTML = computerCharacterName;
     document.getElementById('computerCharacterImage').src = finalChoice + '.jpg';
     document.getElementById("item" + finalChoice).outerHTML = "";
     document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px');
