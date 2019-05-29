@@ -43,6 +43,20 @@ h3 {
     margin-top: 40px;
 }
 
+.character-grid-container-character-selected {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px;
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+
+.character-grid-item {
+    width: 100px;
+    height: 100px;
+}
+
 .grid-container {
     display: grid;
     justify-content: center;
