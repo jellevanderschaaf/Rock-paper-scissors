@@ -71,21 +71,14 @@ function enterTheArena() {
     setTimeout(toggle, 11000);
     setTimeout(computerChooses4, 12000);
     setTimeout(toggle, 12500);
-    setTimeout(computerChooses1, 13500);
-    setTimeout(toggle, 14000);
-    setTimeout(computerChooses2, 15000);
-    setTimeout(toggle, 15500);
-    setTimeout(computerChooses3, 16500);
-    setTimeout(toggle, 17000);
-    setTimeout(computerChooses4, 18000);
-    setTimeout(toggle, 18500);
-    setTimeout(computerChoosesFinal, 20000);
-    setTimeout(toggleFinalChoiceOff, 20100);
-    setTimeout(toggleFinalChoiceOn, 20200);
-    setTimeout(toggleFinalChoiceOff, 20300);
-    setTimeout(toggleFinalChoiceOn, 20400);
-    setTimeout(toggleFinalChoiceOff, 20500);
-    setTimeout(toggleFinalChoiceOn, 20600);
+    setTimeout(computerChoosesFinal, 13000);
+    setTimeout(toggleFinalChoiceOff, 13100);
+    setTimeout(toggleFinalChoiceOn, 13200);
+    setTimeout(toggleFinalChoiceOff, 13300);
+    setTimeout(toggleFinalChoiceOn, 13400);
+    setTimeout(toggleFinalChoiceOff, 13500);
+    setTimeout(toggleFinalChoiceOn, 13600);
+    setTimeout(computerEntersArena, 14000);
 
 }
 
@@ -129,4 +122,11 @@ function toggleFinalChoiceOff() {
 
 function toggleFinalChoiceOn() {
     document.getElementById(finalChoice).style.border = "thick solid #00C851";
+}
+
+function computerEntersArena() {
+    document.getElementById('computerCharacterName').innerHTML = finalChoice;
+    document.getElementById('computerCharacterImage').src = finalChoice + '.jpg';
+    document.getElementById("item" + finalChoice).outerHTML = "";
+    document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px');
 }
