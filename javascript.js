@@ -135,25 +135,74 @@ function computerEntersArena() {
 var playerScore = 0;
 var computerScore = 0;
 var playerHand;
-var computerHand;
 
 
 // gameplay functions
 
 function startGame() {
 
-    document.getElementById('theArena').innerHTML = "";
-    document.getElementById("buttonFight").outerHTML = "";
-    setTimeout(resolveFight, 5000);
+    // document.getElementById('theArena').innerHTML = "";
+    // document.getElementById("buttonFight").outerHTML = "";
+
+    function resolveFight() {
+
+        var computerArray = ['rock', 'paper', 'scissors']
+        var computerHand = computerArray[Math.floor(Math.random() * computerArray.length)];
+
+        if (playerHand == 'rock' && computerHand == 'rock') {
+            document.getElementById('theArena').innerHTML = "Draw!";
+        }
+        if (playerHand == 'rock' && computerHand == 'paper') {
+            document.getElementById('theArena').innerHTML = finalChoice + " wins this round!";
+        }
+        if (playerHand == 'rock' && computerHand == 'scissors') {
+            document.getElementById('theArena').innerHTML = playerCharacter + " wins this round!";
+        }
+
+        if (playerHand == 'paper' && computerHand == 'rock') {
+            document.getElementById('theArena').innerHTML = playerCharacter + " wins this round!";
+        }
+        if (playerHand == 'paper' && computerHand == 'paper') {
+            document.getElementById('theArena').innerHTML = "Draw!";
+        }
+        if (playerHand == 'paper' && computerHand == 'scissors') {
+            document.getElementById('theArena').innerHTML = finalChoice + " wins this round!";
+        }
+
+        if (playerHand == 'scissors' && computerHand == 'rock') {
+            document.getElementById('theArena').innerHTML = finalChoice + " wins this round!";
+        }
+        if (playerHand == 'scissors' && computerHand == 'paper') {
+            document.getElementById('theArena').innerHTML = playerCharacter + " wins this round!";
+        }
+        if (playerHand == 'scissors' && computerHand == 'scissors') {
+            document.getElementById('theArena').innerHTML = "Draw";
+        }
+
+        if (playerHand == false) {
+            document.getElementById('theArena').innerHTML = finalChoice + " wins this round!";
+        }
+    }
+
+    setTimeout(resolveFight, 2000);
 
 }
 
 function setPlayerHand(id) {
     playerHand = id;
+    document.getElementById(playerHand).style.color = "#00C851";
+    setTimeout(togglePlayerHandOff, 500);
+    console.log(playerHand);
 }
 
+function togglePlayerHandOff() {
+    document.getElementById(playerHand).style.color = "black";
+}
 
 function resolveFight() {
+
+    var computerArray = ['rock', 'paper', 'scissors']
+    var computerHand = computerArray[Math.floor(Math.random() * computerArray.length)];
 
     if (playerHand == 'rock' && computerHand == 'rock') {
         document.getElementById('theArena').innerHTML = "Draw!";
