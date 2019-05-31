@@ -148,6 +148,8 @@ function startGame() {
 
         var computerArray = ['rock', 'paper', 'scissors']
         var computerHand = computerArray[Math.floor(Math.random() * computerArray.length)];
+        document.getElementById('arena' + playerHand).classList.remove('hidden');
+        document.getElementById('enemy' + computerHand).classList.remove('hidden');
 
         if (playerHand == 'rock' && computerHand == 'rock') {
             document.getElementById('infoText2').innerHTML = "Draw!";

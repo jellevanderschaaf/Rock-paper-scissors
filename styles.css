@@ -130,9 +130,6 @@ img {
     grid-template-columns: 100px 100px;
     grid-gap: 60px;
     height: 50px;
-    position: absolute;
-    top: 570px;
-    left: 503px
 }
 
 .container-hands-item {
