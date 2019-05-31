@@ -135,6 +135,7 @@ function computerEntersArena() {
 var playerScore = 0;
 var computerScore = 0;
 var playerHand;
+var winner;
 
 
 // gameplay functions
@@ -156,26 +157,32 @@ function startGame() {
         }
         if (playerHand == 'rock' && computerHand == 'paper') {
             document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
+            winner = "computer";
         }
         if (playerHand == 'rock' && computerHand == 'scissors') {
             document.getElementById('infoText2').innerHTML = playerCharacter + " wins this round!";
+            winner = "player";
         }
 
         if (playerHand == 'paper' && computerHand == 'rock') {
             document.getElementById('infoText2').innerHTML = playerCharacter + " wins this round!";
+            winner = "player";
         }
         if (playerHand == 'paper' && computerHand == 'paper') {
             document.getElementById('infoText2').innerHTML = "Draw!";
         }
         if (playerHand == 'paper' && computerHand == 'scissors') {
             document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
+
         }
 
         if (playerHand == 'scissors' && computerHand == 'rock') {
             document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
+            winner = "computer";
         }
         if (playerHand == 'scissors' && computerHand == 'paper') {
             document.getElementById('infoText2').innerHTML = playerCharacter + " wins this round!";
+            winner = "player";
         }
         if (playerHand == 'scissors' && computerHand == 'scissors') {
             document.getElementById('infoText2').innerHTML = "Draw";
@@ -183,6 +190,7 @@ function startGame() {
 
         if (playerHand == false) {
             document.getElementById('infoText2').innerHTML = "Computer wins this round!";
+            winner = "computer";
         }
     }
 
@@ -193,7 +201,13 @@ function startGame() {
     setTimeout(countdown2, 6000);
     setTimeout(countdown1, 7000);
     setTimeout(resolveFight, 8000);
-
+    setTimeout(winningHandGold, 8000);
+    setTimeout(toggleWinningHand, 8100);
+    setTimeout(winningHandGold, 8200);
+    setTimeout(toggleWinningHand, 8300);
+    setTimeout(winningHandGold, 8400);
+    setTimeout(toggleWinningHand, 8500);
+    setTimeout(winningHandGold, 8600);
 }
 
 function setPlayerHand(id) {
@@ -229,4 +243,31 @@ function countdown2() {
 
 function countdown1() {
     document.getElementById('infoText2').innerHTML = "1";
+}
+
+function winningHandGold() {
+
+    if (winner == "player") {
+        document.getElementById('arenarock').style.color = "#ffbb33";
+        document.getElementById('arenapaper').style.color = "#ffbb33";
+        document.getElementById('arenascissors').style.color = "#ffbb33";
+    }
+    if (winner == "computer") {
+        document.getElementById('enemyrock').style.color = "#ffbb33";
+        document.getElementById('enemypaper').style.color = "#ffbb33";
+        document.getElementById('enemyscissors').style.color = "#ffbb33";
+    }
+}
+
+function toggleWinningHand() {
+    if (winner == "player") {
+        document.getElementById('arenarock').style.color = "black";
+        document.getElementById('arenapaper').style.color = "black";
+        document.getElementById('arenascissors').style.color = "black";
+    }
+    if (winner == "computer") {
+        document.getElementById('enemyrock').style.color = "black";
+        document.getElementById('enemypaper').style.color = "black";
+        document.getElementById('enemyscissors').style.color = "black";
+    }
 }
