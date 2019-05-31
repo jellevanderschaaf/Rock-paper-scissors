@@ -208,6 +208,8 @@ function startGame() {
     setTimeout(winningHandGold, 8400);
     setTimeout(toggleWinningHand, 8500);
     setTimeout(winningHandGold, 8600);
+    setTimeout(keepScore, 9000);
+    setTimeout(keepScore2, 9000);
 }
 
 function setPlayerHand(id) {
@@ -282,5 +284,36 @@ function toggleWinningHand() {
         document.getElementById('enemyrock').style.setProperty('font-size', '40px');
         document.getElementById('enemypaper').style.setProperty('font-size', '40px');
         document.getElementById('enemyscissors').style.setProperty('font-size', '40px');
+    }
+}
+
+function keepScore() {
+    if (winner == "player") {
+        playerScore += 1;
+    }
+    if (winner == 'computer') {
+        computerScore + 1;
+    }
+}
+
+function keepScore2() {
+    if (playerScore == 1) {
+        document.getElementById('playerCircle1').style.color = "#00C851";
+    }
+    if (playerScore == 2) {
+        document.getElementById('playerCircle2').style.color = "#00C851";
+    }
+    if (playerScore == 3) {
+        document.getElementById('playerCircle3').style.color = "#00C851";
+    }
+
+    if (computerScore == 1) {
+        document.getElementById('computerCircle1').style.color = "#00C851";
+    }
+    if (computerScore == 2) {
+        document.getElementById('computerCircle2').style.color = "#00C851";
+    }
+    if (computerScore == 3) {
+        document.getElementById('computerCircle3').style.color = "#00C851";
     }
 }
