@@ -251,11 +251,17 @@ function winningHandGold() {
         document.getElementById('arenarock').style.color = "#ffbb33";
         document.getElementById('arenapaper').style.color = "#ffbb33";
         document.getElementById('arenascissors').style.color = "#ffbb33";
+        document.getElementById('arenarock').style.setProperty('font-size', '50px');
+        document.getElementById('arenapaper').style.setProperty('font-size', '50px');
+        document.getElementById('arenascissors').style.setProperty('font-size', '50px');
     }
     if (winner == "computer") {
         document.getElementById('enemyrock').style.color = "#ffbb33";
         document.getElementById('enemypaper').style.color = "#ffbb33";
         document.getElementById('enemyscissors').style.color = "#ffbb33";
+        document.getElementById('enemyrock').style.setProperty('font-size', '50px');
+        document.getElementById('enemypaper').style.setProperty('font-size', '50px');
+        document.getElementById('enemyscissors').style.setProperty('font-size', '50px');
     }
 }
 
@@ -264,10 +270,17 @@ function toggleWinningHand() {
         document.getElementById('arenarock').style.color = "black";
         document.getElementById('arenapaper').style.color = "black";
         document.getElementById('arenascissors').style.color = "black";
+        document.getElementById('arenarock').style.setProperty('font-size', '40px');
+        document.getElementById('arenapaper').style.setProperty('font-size', '40px');
+        document.getElementById('arenascissors').style.setProperty('font-size', '40px');
+
     }
     if (winner == "computer") {
         document.getElementById('enemyrock').style.color = "black";
         document.getElementById('enemypaper').style.color = "black";
         document.getElementById('enemyscissors').style.color = "black";
+        document.getElementById('enemyrock').style.setProperty('font-size', '40px');
+        document.getElementById('enemypaper').style.setProperty('font-size', '40px');
+        document.getElementById('enemyscissors').style.setProperty('font-size', '40px');
     }
 }
