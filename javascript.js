@@ -186,7 +186,13 @@ function startGame() {
         }
     }
 
-    setTimeout(resolveFight, 2000);
+    setTimeout(roundOne, 2000);
+    setTimeout(countdown5, 3000);
+    setTimeout(countdown4, 4000);
+    setTimeout(countdown3, 5000);
+    setTimeout(countdown2, 6000);
+    setTimeout(countdown1, 7000);
+    setTimeout(resolveFight, 8000);
 
 }
 
@@ -199,4 +205,28 @@ function setPlayerHand(id) {
 
 function togglePlayerHandOff() {
     document.getElementById(playerHand).style.color = "black";
+}
+
+function roundOne() {
+    document.getElementById('infoText2').innerHTML = "Round one!";
+}
+
+function countdown5() {
+    document.getElementById('infoText2').innerHTML = "5";
+}
+
+function countdown4() {
+    document.getElementById('infoText2').innerHTML = "4";
+}
+
+function countdown3() {
+    document.getElementById('infoText2').innerHTML = "3";
+}
+
+function countdown2() {
+    document.getElementById('infoText2').innerHTML = "2";
+}
+
+function countdown1() {
+    document.getElementById('infoText2').innerHTML = "1";
 }
