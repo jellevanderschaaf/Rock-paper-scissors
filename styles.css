@@ -123,3 +123,22 @@ img {
     transform: scaleX(-1);
     cursor: pointer;
 }
+
+.container-hands {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px;
+    grid-gap: 60px;
+}
+
+.container-hands-item {
+    text-align: center;
+}
+
+.large {
+    font-size: 50px;
+}
+
+.hidden {
+    display: none;
+}
