@@ -199,12 +199,19 @@ function startGame() {
         }
     }
 
-    playRound();
-    setTimeout(playRound, 9000);
-    setTimeout(playRound, 18000);
+
+    var interval = setInterval(playRound, 9000);
+
+    function checkGameFinished() {
+
+        if (playerScore == 2 || computerScore == 2) {
+            clearInterval(interval);
+        }
+    }
 
     function playRound() {
 
+        setTimeout(checkGameFinished, 9000);
         setTimeout(newRound, 2000);
         setTimeout(countdown5, 3000);
         setTimeout(countdown4, 4000);
@@ -223,14 +230,13 @@ function startGame() {
         setTimeout(keepScore2, 9000);
         setTimeout(clearArena, 9000);
 
+
         console.log("round = " + round);
         console.log("playerHand = " + playerHand);
         console.log("computerHand = " + computerHand);
         console.log("winner = " + winner);
         console.log("playerScore = " + playerScore);
         console.log("computerScore = " + computerScore);
-
-
     }
 }
 
@@ -308,12 +314,6 @@ function toggleWinningHand() {
         document.getElementById('enemyscissors').style.setProperty('font-size', '40px');
     }
 }
-
-// global variables
-
-
-
-//
 
 function keepScore() {
     if (winner == "player") {
