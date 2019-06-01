@@ -134,7 +134,7 @@ function computerEntersArena() {
 
 var playerHand;
 var winner;
-var round = 1;
+var round = 0;
 
 
 // gameplay functions
@@ -193,23 +193,30 @@ function startGame() {
         }
     }
 
-    setTimeout(newRound, 2000);
-    setTimeout(countdown5, 3000);
-    setTimeout(countdown4, 4000);
-    setTimeout(countdown3, 5000);
-    setTimeout(countdown2, 6000);
-    setTimeout(countdown1, 7000);
-    setTimeout(resolveFight, 8000);
-    setTimeout(winningHandGold, 8000);
-    setTimeout(toggleWinningHand, 8100);
-    setTimeout(winningHandGold, 8200);
-    setTimeout(toggleWinningHand, 8300);
-    setTimeout(winningHandGold, 8400);
-    setTimeout(toggleWinningHand, 8500);
-    setTimeout(winningHandGold, 8600);
-    setTimeout(keepScore, 9000);
-    setTimeout(keepScore2, 9000);
-    setTimeout(clearArena, 9000);
+    playRound();
+    setTimeout(playRound, 9000);
+    setTimeout(playRound, 18000);
+
+    function playRound() {
+
+        setTimeout(newRound, 2000);
+        setTimeout(countdown5, 3000);
+        setTimeout(countdown4, 4000);
+        setTimeout(countdown3, 5000);
+        setTimeout(countdown2, 6000);
+        setTimeout(countdown1, 7000);
+        setTimeout(resolveFight, 8000);
+        setTimeout(winningHandGold, 8000);
+        setTimeout(toggleWinningHand, 8100);
+        setTimeout(winningHandGold, 8200);
+        setTimeout(toggleWinningHand, 8300);
+        setTimeout(winningHandGold, 8400);
+        setTimeout(toggleWinningHand, 8500);
+        setTimeout(winningHandGold, 8600);
+        setTimeout(keepScore, 9000);
+        setTimeout(keepScore2, 9000);
+        setTimeout(clearArena, 9000);
+    }
 }
 
 function setPlayerHand(id) {
@@ -224,7 +231,8 @@ function togglePlayerHandOff() {
 }
 
 function newRound() {
-    document.getElementById('infoText2').innerHTML = "Round " + round + "!";
+    round += 1;
+    document.getElementById('infoText2').innerHTML = "Round " + round;
 }
 
 function countdown5() {
@@ -315,13 +323,13 @@ function keepScore2() {
     }
 
     if (computerScore == 1) {
-        document.getElementById('computerCircle1').style.color = "#00C851";
+        document.getElementById('computerCircle3').style.color = "#00C851";
     }
     if (computerScore == 2) {
         document.getElementById('computerCircle2').style.color = "#00C851";
     }
     if (computerScore == 3) {
-        document.getElementById('computerCircle3').style.color = "#00C851";
+        document.getElementById('computerCircle1').style.color = "#00C851";
     }
 }
 
@@ -332,5 +340,4 @@ function clearArena() {
     document.getElementById('enemyrock').classList.add('hidden');
     document.getElementById('enemypaper').classList.add('hidden');
     document.getElementById('enemyscissors').classList.add('hidden');
-
 }
