@@ -1,5 +1,6 @@
 // Global variables
 
+
 var playerCharacter;
 var playerCharacterName;
 var characterArray = [];
