@@ -245,35 +245,29 @@ function startGame() {
 
     playRound();
 
-    var interval = setInterval(playRound, 9000);
-
-    function checkGameFinished() {
-
-        if (playerScore == 3 || computerScore == 3) {
-            clearInterval(interval);
-        }
-    }
-
     function playRound() {
 
-        checkGameFinished();
-        setTimeout(newRound, 1000);
-        setTimeout(countdown5, 2000);
-        setTimeout(countdown4, 3000);
-        setTimeout(countdown3, 4000);
-        setTimeout(countdown2, 5000);
-        setTimeout(countdown1, 6000);
-        setTimeout(resolveFight, 7000);
-        setTimeout(winningHandGold, 7000);
-        setTimeout(toggleWinningHand, 7100);
-        setTimeout(winningHandGold, 7200);
-        setTimeout(toggleWinningHand, 7300);
-        setTimeout(winningHandGold, 7400);
-        setTimeout(toggleWinningHand, 7500);
-        setTimeout(winningHandGold, 7600);
-        setTimeout(keepScore, 8000);
-        setTimeout(keepScore2, 8000);
-        setTimeout(clearArena, 8000);
+        if (playerScore < 3 && computerScore < 3) {
+
+            setTimeout(newRound, 1000);
+            setTimeout(countdown5, 2000);
+            setTimeout(countdown4, 3000);
+            setTimeout(countdown3, 4000);
+            setTimeout(countdown2, 5000);
+            setTimeout(countdown1, 6000);
+            setTimeout(resolveFight, 7000);
+            setTimeout(winningHandGold, 7000);
+            setTimeout(toggleWinningHand, 7100);
+            setTimeout(winningHandGold, 7200);
+            setTimeout(toggleWinningHand, 7300);
+            setTimeout(winningHandGold, 7400);
+            setTimeout(toggleWinningHand, 7500);
+            setTimeout(winningHandGold, 7600);
+            setTimeout(keepScore, 8000);
+            setTimeout(keepScore2, 8000);
+            setTimeout(clearArena, 8000);
+            setTimeout(playRound, 9000);
+        }
     }
 }
 
