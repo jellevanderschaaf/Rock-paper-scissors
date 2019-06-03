@@ -18,7 +18,6 @@ function chooseCharacter(id) {
         document.getElementById("buttonArena").disabled = false;
     }
 
-
     if (id == 'Conan') {
         document.getElementById('Thulsa').style.border = "";
         document.getElementById('Zula').style.border = "";
@@ -49,22 +48,47 @@ function chooseCharacter(id) {
 
 function enterTheArena() {
 
-    if (playerCharacter) {
-        document.getElementById('characterName').innerHTML = playerCharacterName;
-        document.getElementById('characterImage').src = playerCharacter + '.jpg';
-        document.getElementById("item" + playerCharacter).outerHTML = "";
-        document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
-        document.getElementById("buttonArena").disabled = true;
 
+    document.getElementById('characterName').innerHTML = playerCharacterName;
+    document.getElementById('characterImage').src = playerCharacter + '.jpg';
+    document.getElementById("item" + playerCharacter).outerHTML = "";
+    document.getElementById('characterGrid').style.setProperty('grid-template-columns', '100px 100px 100px');
+    document.getElementById("buttonArena").disabled = true;
+
+    if (playerCharacter == "Conan") {
         document.getElementById('Thulsa').onclick = null;
         document.getElementById('Zula').onclick = null;
         document.getElementById('Rexor').onclick = null;
-
         document.getElementById('Thulsa').style.pointerEvents = "none";
         document.getElementById('Zula').style.pointerEvents = "none";
         document.getElementById('Rexor').style.pointerEvents = "none";
-
     }
+    if (playerCharacter == "Thulsa") {
+        document.getElementById('Conan').onclick = null;
+        document.getElementById('Zula').onclick = null;
+        document.getElementById('Rexor').onclick = null;
+        document.getElementById('Conan').style.pointerEvents = "none";
+        document.getElementById('Zula').style.pointerEvents = "none";
+        document.getElementById('Rexor').style.pointerEvents = "none";
+    }
+    if (playerCharacter == "Zula") {
+        document.getElementById('Thulsa').onclick = null;
+        document.getElementById('Conan').onclick = null;
+        document.getElementById('Rexor').onclick = null;
+        document.getElementById('Thulsa').style.pointerEvents = "none";
+        document.getElementById('Conan').style.pointerEvents = "none";
+        document.getElementById('Rexor').style.pointerEvents = "none";
+    }
+    if (playerCharacter == "Rexor") {
+        document.getElementById('Thulsa').onclick = null;
+        document.getElementById('Zula').onclick = null;
+        document.getElementById('Conan').onclick = null;
+        document.getElementById('Thulsa').style.pointerEvents = "none";
+        document.getElementById('Zula').style.pointerEvents = "none";
+        document.getElementById('Conan').style.pointerEvents = "none";
+    }
+
+
 
     setTimeout(computerChooses1, 1500);
     setTimeout(toggle, 2000);
