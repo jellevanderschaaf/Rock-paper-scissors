@@ -1,13 +1,11 @@
 // Global variables
 
-
 var playerCharacter;
 var playerCharacterName;
 var characterArray = [];
 var randomChar;
 var finalChoice;
 var computerCharacterName;
-var lockCharacterSelection;
 
 // functions character selection
 
@@ -49,7 +47,6 @@ function chooseCharacter(id) {
 
 function enterTheArena() {
 
-
     document.getElementById('characterName').innerHTML = playerCharacterName;
     document.getElementById('characterImage').src = playerCharacter + '.jpg';
     document.getElementById("item" + playerCharacter).outerHTML = "";
@@ -57,6 +54,7 @@ function enterTheArena() {
     document.getElementById("buttonArena").disabled = true;
 
     if (playerCharacter == "Conan") {
+
         document.getElementById('Thulsa').onclick = null;
         document.getElementById('Zula').onclick = null;
         document.getElementById('Rexor').onclick = null;
@@ -88,8 +86,6 @@ function enterTheArena() {
         document.getElementById('Zula').style.pointerEvents = "none";
         document.getElementById('Conan').style.pointerEvents = "none";
     }
-
-
 
     setTimeout(computerChooses1, 1500);
     setTimeout(toggle, 2000);
@@ -155,7 +151,7 @@ function toggleFinalChoiceOn() {
 function computerEntersArena() {
 
     if (finalChoice == "Thulsa") {
-        computerCharacterName = "Thulsa Doom"
+        computerCharacterName = "Thulsa Doom";
     } else computerCharacterName = finalChoice;
 
     document.getElementById('computerCharacterName').innerHTML = computerCharacterName;
@@ -216,7 +212,7 @@ function startGame() {
         }
         if (playerHand == 'paper' && computerHand == 'scissors') {
             document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
-
+            winner = "computer";
         }
 
         if (playerHand == 'scissors' && computerHand == 'rock') {
