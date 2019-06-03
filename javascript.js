@@ -163,7 +163,7 @@ function computerEntersArena() {
 
 // global variables
 
-var playerHand = "absent";
+var playerHand = "Absent";
 var computerHand;
 var winner = "";
 var round = 0;
@@ -228,22 +228,23 @@ function startGame() {
             winner = "";
         }
 
-        if (playerHand == 'absent' && computerHand == 'rock') {
+        if (playerHand == 'Absent' && computerHand == 'rock') {
             document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
             winner = "computer";
         }
-        if (playerHand == 'absent' && computerHand == 'paper') {
-            document.getElementById('infoText2').innerHTML = playerCharacter + " wins this round!";
+        if (playerHand == 'Absent' && computerHand == 'paper') {
+            document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
             winner = "computer";
         }
-        if (playerHand == 'absent' && computerHand == 'scissors') {
-            document.getElementById('infoText2').innerHTML = "Draw";
+        if (playerHand == 'Absent' && computerHand == 'scissors') {
+            document.getElementById('infoText2').innerHTML = finalChoice + " wins this round!";
             winner = "computer";
         }
 
     }
 
     playRound();
+
     var interval = setInterval(playRound, 9000);
 
     function checkGameFinished() {
@@ -400,6 +401,6 @@ function clearArena() {
     document.getElementById('enemypaper').classList.add('hidden');
     document.getElementById('enemyscissors').classList.add('hidden');
     winner = "";
-    playerHand = "";
+    playerHand = "Absent";
     computerHand = "";
 }
