@@ -18,6 +18,7 @@ function chooseCharacter(id) {
         document.getElementById("buttonArena").disabled = false;
     }
 
+
     if (id == 'Conan') {
         document.getElementById('Thulsa').style.border = "";
         document.getElementById('Zula').style.border = "";
