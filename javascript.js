@@ -60,6 +60,14 @@ function enterTheArena() {
         document.getElementById('Zula').onclick = null;
         document.getElementById('Rexor').onclick = null;
 
+        document.getElementById('Thulsa').style.pointerEvents = "none";
+        document.getElementById('Zula').style.pointerEvents = "none";
+        document.getElementById('Rexor').style.pointerEvents = "none";
+
+
+        document.getElementById('arenascissors').style.color = "black";
+        document.getElementById('arenarock').style.setProperty('font-size', '40px');
+
     }
 
     setTimeout(computerChooses1, 1500);
