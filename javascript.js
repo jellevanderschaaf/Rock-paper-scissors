@@ -178,6 +178,8 @@ function startGame() {
     document.getElementById('vs').innerHTML = "";
     document.getElementById("buttonFight").outerHTML = "";
 
+    instructions();
+
     function resolveFight() {
 
         var computerArray = ['rock', 'paper', 'scissors']
@@ -243,7 +245,7 @@ function startGame() {
 
     }
 
-    playRound();
+    setTimeout(playRound, 7000);
 
     function playRound() {
 
@@ -407,4 +409,28 @@ function endGame() {
     if (computerScore == 3) {
         document.getElementById('infoText2').innerHTML = computerCharacterName + " wins the game in " + round + " rounds!";
     }
+}
+
+function instructions() {
+    document.getElementById('infoText2').innerHTML = "Use the icons below your portrait to fight your enemy!";
+    highlightHandsOn();
+    setTimeout(highlightHandsOff, 1000);
+    setTimeout(highlightHandsOn, 2000);
+    setTimeout(highlightHandsOff, 3000);
+    setTimeout(highlightHandsOn, 4000);
+    setTimeout(highlightHandsOff, 5000);
+    setTimeout(highlightHandsOn, 6000);
+    setTimeout(highlightHandsOff, 7000);
+}
+
+function highlightHandsOn() {
+    document.getElementById('rock').style.color = "#ffbb33";
+    document.getElementById('paper').style.color = "#ffbb33";
+    document.getElementById('scissors').style.color = "#ffbb33";
+}
+
+function highlightHandsOff() {
+    document.getElementById('rock').style.color = "black";
+    document.getElementById('paper').style.color = "black";
+    document.getElementById('scissors').style.color = "black";
 }
