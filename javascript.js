@@ -266,6 +266,7 @@ function startGame() {
             setTimeout(keepScore, 8000);
             setTimeout(keepScore2, 8000);
             setTimeout(clearArena, 8000);
+            setTimeout(endGame, 8000);
             setTimeout(playRound, 9000);
         }
     }
@@ -397,4 +398,13 @@ function clearArena() {
     winner = "";
     playerHand = "Absent";
     computerHand = "";
+}
+
+function endGame() {
+    if (playerScore == 3) {
+        document.getElementById('infoText2').innerHTML = playerCharacterName + " wins the game in " + round + " rounds!";
+    }
+    if (computerScore == 3) {
+        document.getElementById('infoText2').innerHTML = computerCharacterName + " wins the game in " + round + " rounds!";
+    }
 }
